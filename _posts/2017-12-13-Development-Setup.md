@@ -32,8 +32,8 @@ sudo ./make.sh install
 
 ```
 git clone https://github.com/reswitched/Mephisto.git
-cd Mephistosudo
-pip2 install -r requirements.txt
+cd Mephisto
+sudo pip2 install -r requirements.txt
 make
 ```
 If your default LLVM and Clang are below 5.0
