@@ -24,7 +24,7 @@ For information on that check the readme.
 ```
 git clone https://github.com/reswitched/unicorn.git
 cd unicorn
-sudo pip2 install -r requirements.txt
+
 UNICORN_QEMU_FLAGS="--python=python2" UNICORN_ARCHS="aarch64" ./make.sh
 sudo ./make.sh install
 ```
@@ -32,7 +32,8 @@ sudo ./make.sh install
 
 ```
 git clone https://github.com/reswitched/Mephisto.git
-cd Mephisto
+cd Mephistosudo
+pip2 install -r requirements.txt
 make
 ```
 If your default LLVM and Clang are below 5.0
