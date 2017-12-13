@@ -13,10 +13,13 @@ This is an example of what it takes to setup up a reswitched development environ
     - Debian and Ubuntu do not.
         - You will need to add the [official llvm apt](https://apt.llvm.org/)
         - I recommend setting llvm-5 and clang-5 as default, but it isn't necessary.
+    - Fedora is also not up to date.
+        - You can download prebuilt binaries from the llvm website or build it yourself.
 - Python2 and Pip2
 
 ## Mephisto
-
+Mephisto recently got a dockerfile.
+For information on that check the readme.
 ### Build Unicorn
 ```
 git clone https://github.com/reswitched/unicorn.git
@@ -26,12 +29,17 @@ UNICORN_QEMU_FLAGS="--python=python2" UNICORN_ARCHS="aarch64" ./make.sh
 sudo ./make.sh install
 ```
 ### Build Mephisto
+
 ```
 git clone https://github.com/reswitched/Mephisto.git
 cd Mephisto
 make
 ```
-
+If your default LLVM and Clang are below 5.0
+run make like this. (i.e Ubuntu and Debian with the apt repo)
+```
+make LLVM_POSTFIX=-5.0
+```
 You might want to add ctu to your PATH.
 
 ## Libtransistor
@@ -58,4 +66,4 @@ make MEPHISTO=path/to/Mephisto/ctu run_tests
 ## Where to go from here:
 This section will be filled with docs and tutorials as they are released.
 
-### Last Updated: 12/12/2017 MM/DD/YYY
+### Last Updated: 2017/12/13 YYYY/MM/DD
